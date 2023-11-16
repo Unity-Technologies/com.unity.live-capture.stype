@@ -1,0 +1,20 @@
+# For more information about the available options please visit: http://go/backstage (VPN required)
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  annotations:
+    github.com/project-slug: Unity-Technologies/com.unity.live-capture.stype
+  name: com.unity.live-capture.stype
+  description: "The Stype package extends the Live Capture package functionality to capturing data from camera tracking devices that support the Stype protocol."
+  labels:
+    costcenter: "5063"
+  tags:
+    - planned-public
+  links:
+    - url: https://unity.slack.com/messages/CAUGBHMCJ/
+      title: "#tokyo-film"
+      icon: chat
+spec:
+  type: unity-package
+  lifecycle: experimental
+  owner: unity-technologies/unity-engine-japan
