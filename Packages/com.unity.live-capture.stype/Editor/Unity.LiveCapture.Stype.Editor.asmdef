@@ -1,0 +1,31 @@
+{
+    "name": "Unity.LiveCapture.Stype.Editor",
+    "rootNamespace": "",
+    "references": [
+        "Unity.LiveCapture.Stype",
+        "Unity.LiveCapture",
+        "Unity.LiveCapture.Rendering.Editor",
+        "Unity.LiveCapture.Networking",
+        "Unity.LiveCapture.Cameras",
+        "Unity.LiveCapture.Editor",
+        "Unity.LiveCapture.Cameras.Editor",
+        "Unity.RenderPipelines.HighDefinition.Runtime"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [
+        {
+            "name": "com.unity.render-pipelines.high-definition",
+            "expression": "14.0.0",
+            "define": "HDRP_14_0_OR_NEWER"
+        }
+    ],
+    "noEngineReferences": false
+}
