@@ -1,0 +1,13 @@
+{
+  "dependencies": {
+    "com.unity.ide.rider": "3.0.25",
+    "com.unity.live-capture.stype": "file:../../../Packages/com.unity.live-capture.stype",
+    "com.unity.render-pipelines.high-definition": "14.0.8",
+    "com.unity.testtools.codecoverage": "1.2.4",
+    "com.unity.modules.screencapture": "1.0.0",
+    "com.unity.modules.unityanalytics": "1.0.0"
+  },
+  "testables": [
+    "com.unity.live-capture.stype"
+  ]
+}
