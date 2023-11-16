@@ -1,0 +1,36 @@
+{
+    "name": "Unity.LiveCapture.Stype",
+    "rootNamespace": "",
+    "references": [
+        "Unity.LiveCapture",
+        "Unity.LiveCapture.Cameras",
+        "Unity.Profiling.Core",
+        "Unity.RenderPipelines.Core.Runtime",
+        "Unity.RenderPipelines.HighDefinition.Runtime"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": true,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [
+        {
+            "name": "com.unity.profiling.core",
+            "expression": "1.0.0",
+            "define": "PROFILING_CORE_1_0_OR_NEWER"
+        },
+        {
+            "name": "com.unity.render-pipelines.high-definition",
+            "expression": "14.0.0",
+            "define": "HDRP_14_0_OR_NEWER"
+        },
+        {
+            "name": "com.unity.render-pipelines.core",
+            "expression": "14.0.0",
+            "define": "SRP_CORE_14_0_OR_NEWER"
+        }
+    ],
+    "noEngineReferences": false
+}

@@ -1,0 +1,24 @@
+{
+    "name": "Unity.LiveCapture.Stype.Tests.Runtime",
+    "rootNamespace": "",
+    "references": [
+        "Unity.LiveCapture",
+        "Unity.LiveCapture.Cameras",
+        "Unity.LiveCapture.Stype",
+        "UnityEngine.TestRunner"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": true,
+    "precompiledReferences": [
+        "nunit.framework.dll",
+        "StypeAPI.dll"
+    ],
+    "autoReferenced": true,
+    "defineConstraints": [
+        "UNITY_INCLUDE_TESTS"
+    ],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
