@@ -57,3 +57,6 @@ build.bat.meta
 *.ipdb
 *.pdb.meta
 .buginfo
+
+
+Plugin~
