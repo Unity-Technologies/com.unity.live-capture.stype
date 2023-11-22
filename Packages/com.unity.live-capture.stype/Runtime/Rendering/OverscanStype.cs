@@ -14,7 +14,7 @@ namespace Unity.LiveCapture.Stype.Rendering
     /// <remarks>
     /// This component uses the Brown-Conrady distortion model and is only available in HDRP.
     /// </remarks>
-    [AddComponentMenu("Live Capture/Overscan (Stype)")]
+    [AddComponentMenu("Live Capture/Overscan (stYpe)")]
     [DisallowMultipleComponent]
     [ExecuteAlways]
 #if HDRP_14_0_OR_NEWER
@@ -36,18 +36,20 @@ namespace Unity.LiveCapture.Stype.Rendering
         Camera m_OverscanCamera;
         [SerializeField, Tooltip("The amount of overscan.")]
         float m_Overscan;
-        [SerializeField, Tooltip("The flag of flipping output image vertially.")]
-        bool m_FlipVertical = false;
+
 
         [Tooltip("Principal point normalized, expressed as an offset from image center.")]
         Camera m_Camera;
 #if HDRP_14_0_OR_NEWER
         HDAdditionalCameraData m_AdditionalCameraData;
+        HDAdditionalCameraData m_DstAdditionalCameraData;
 #endif
         GlobalKeyword m_UsingOverscanKeyword;
         RenderTexture m_RenderTexture;
         Vector4 m_ScaleAndBias;
         bool m_UsePhysicalProperties;
+        bool m_FlipVertical = false;
+        Vector2? m_ViewportSize;
 
         /// <summary>
         /// The number of pixels to overscan.
@@ -75,6 +77,12 @@ namespace Unity.LiveCapture.Stype.Rendering
             CopyCameraProperties(m_Camera, m_OverscanCamera);
         }
 
+        public void SetResolutionForNextRendering(Vector2Int? resolution = null, bool flipVertical = true)
+        {
+            m_ViewportSize = resolution;
+            m_FlipVertical = flipVertical;
+        }
+
         void OnValidate()
         {
             m_Overscan = Mathf.Max(1f, m_Overscan);
@@ -82,14 +90,13 @@ namespace Unity.LiveCapture.Stype.Rendering
 
         void OnEnable()
         {
+            EnsureOverscanCamera();
             m_UsingOverscanKeyword = GlobalKeyword.Create(k_UsingOverscan);
             m_Camera = GetComponent<Camera>();
 #if HDRP_14_0_OR_NEWER
             m_AdditionalCameraData = GetComponent<HDAdditionalCameraData>();
             m_AdditionalCameraData.customRender += OnCustomRender;
 #endif
-            EnsureOverscanCamera();
-
             RenderPipelineManager.beginContextRendering += OnBeginContextRendering;
             RenderPipelineManager.endContextRendering += OnEndContextRendering;
         }
@@ -108,13 +115,11 @@ namespace Unity.LiveCapture.Stype.Rendering
         void OnBeginContextRendering(ScriptableRenderContext context, List<Camera> cameras)
         {
             var camera = m_OverscanCamera;
-
             if (camera == null)
             {
                 return;
             }
-
-            var viewportSize = new Vector2(m_Camera.pixelWidth, m_Camera.pixelHeight);
+            Vector2 viewportSize = m_ViewportSize ?? new Vector2(m_Camera.pixelWidth, m_Camera.pixelHeight);
             var textureSize = viewportSize * m_Overscan;
             var lensShift = camera.GetGateFittedLensShift();
 
@@ -188,7 +193,7 @@ namespace Unity.LiveCapture.Stype.Rendering
                 var camera = hdCamera.camera;
                 var targetTexture = camera.targetTexture;
                 var targetId = targetTexture != null ?
-                    new RenderTargetIdentifier(targetTexture) : 
+                    new RenderTargetIdentifier(targetTexture) :
                     new RenderTargetIdentifier(BuiltinRenderTextureType.CameraTarget);
 
                 var cmd = CommandBufferPool.Get(k_CommandBufferName);
@@ -227,6 +232,12 @@ namespace Unity.LiveCapture.Stype.Rendering
 
         void LateUpdate()
         {
+            m_ViewportSize = null;
+#if HDRP_14_0_OR_NEWER
+            m_FlipVertical = true;
+#else
+            m_FlipVertical = false;
+#endif
             UpdateProperties();
         }
 
@@ -242,6 +253,12 @@ namespace Unity.LiveCapture.Stype.Rendering
 
                 m_OverscanCamera = go.GetComponent<Camera>();
             }
+
+            m_DstAdditionalCameraData = m_OverscanCamera.GetComponent<HDAdditionalCameraData>();
+            if (m_DstAdditionalCameraData == null)
+            {
+                m_DstAdditionalCameraData = m_OverscanCamera.gameObject.AddComponent<HDAdditionalCameraData>();
+            }
         }
 
         void DisposeOverscanCamera()
@@ -254,7 +271,7 @@ namespace Unity.LiveCapture.Stype.Rendering
             }
         }
 
-        static void CopyCameraProperties(Camera src, Camera dst)
+        void CopyCameraProperties(Camera src, Camera dst)
         {
             dst.allowDynamicResolution = src.allowDynamicResolution;
             dst.allowHDR = src.allowHDR;
@@ -286,6 +303,10 @@ namespace Unity.LiveCapture.Stype.Rendering
             dst.sensorSize = src.sensorSize;
             dst.projectionMatrix = src.projectionMatrix;
             dst.usePhysicalProperties = src.usePhysicalProperties;
+
+#if HDRP_14_0_OR_NEWER
+            m_AdditionalCameraData.CopyTo(m_DstAdditionalCameraData);
+#endif
         }
 
         static GraphicsFormat GetGraphicsFormat()

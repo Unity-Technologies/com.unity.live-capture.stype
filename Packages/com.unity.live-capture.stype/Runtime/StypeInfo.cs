@@ -9,7 +9,7 @@ namespace Unity.LiveCapture.Stype
         /// <summary>
         ///
         /// </summary>
-        public const string CompanyName = "Stype";
+        public const string CompanyName = "stYpe";
         /// <summary>
         ///
         /// </summary>

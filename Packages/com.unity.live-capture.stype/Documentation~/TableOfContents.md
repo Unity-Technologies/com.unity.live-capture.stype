@@ -1,4 +1,4 @@
-* [Live Capture Stype package](index.md)
+* [Live Capture stYpe package](index.md)
 * [Installation](installation.md)
 * [Get Started](getting-started.md)
 * [Features](features.md)

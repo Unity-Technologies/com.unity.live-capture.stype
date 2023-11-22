@@ -9,7 +9,7 @@ namespace Unity.LiveCapture.Stype.Rendering
     /// <remarks>
     /// This component uses the Brown-Conrady distortion model and is only available in HDRP.
     /// </remarks>
-    [AddComponentMenu("Live Capture/Lens Distortion (Stype)")]
+    [AddComponentMenu("Live Capture/Lens Distortion (stYpe)")]
     [DisallowMultipleComponent]
     [ExecuteAlways]
     [RequireComponent(typeof(Camera))]

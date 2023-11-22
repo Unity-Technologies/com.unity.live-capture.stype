@@ -8,7 +8,7 @@ using LensDistortion = Unity.LiveCapture.Stype.Rendering.LensDistortionStype;
 namespace Unity.LiveCapture.Stype
 {
     /// <summary>
-    /// A device used to connect to a Stype Red Spy to drive a virtual camera.
+    /// A device used to connect to a stYpe Red Spy to drive a virtual camera.
     /// </summary>
     [CreateDeviceMenuItem(StypeInfo.CompanyName + "/" + StypeInfo.RedSpyName)]
     public sealed class RedSpyDevice : CameraTrackingDevice
@@ -275,7 +275,7 @@ namespace Unity.LiveCapture.Stype
 
         /// <summary>
         /// Camera position.
-        /// Unity defines a camera position is center of sensor. Stype provides positions as a focal point of lens.
+        /// Unity defines a camera position is center of sensor. stYpe provides positions as a focal point of lens.
         /// This method returns sum of focal point and offset of focal length.
         /// </summary>
         /// <param name="data"></param>

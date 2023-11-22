@@ -12,6 +12,6 @@ To install the Keyer package, follow the instructions in the [Package Manager do
 
 ## Supported devices
 
-This package supports the following Stype devices:
+This package supports the following stYpe devices:
 
 - [**RedSpy 3.0**](https://www.stype.tv/redspy)

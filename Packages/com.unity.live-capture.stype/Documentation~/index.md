@@ -1,11 +1,11 @@
-# Live Capture Stype package
+# Live Capture stYpe package
 
-![Stype logo](images/stype-logo-black.png)
+![stYpe logo](images/stype-logo-black.png)
 
 >[!NOTE]
 > To use this package, you must install it separately and use a specific Unity Editor license. For detailed information about package requirements and installation instructions, refer to [Installation](installation.md).
 
-The Stype package extends the [**Live Capture**](https://docs.unity3d.com/Packages/com.unity.live-capture@latest) package functionality to capturing data from camera tracking devices that support the **Stype protocol**.
+The stYpe package extends the [**Live Capture**](https://docs.unity3d.com/Packages/com.unity.live-capture@latest) package functionality to capturing data from camera tracking devices that support the **stYpe protocol**.
 
 For instance, you can use the [RedSpy device](https://www.stype.tv/redspy) to manipulate the following Unity camera properties:
 
@@ -21,11 +21,11 @@ For instance, you can use the [RedSpy device](https://www.stype.tv/redspy) to ma
 
  | Section | Description |
  |:---|:---|
- | [**Installation**](installation.md) | Install the Stype package and learn about the package requirements. |
- | [**Getting started**](getting-started.md) | This section describes the steps to link the Stype device with the Unity camera. |
- | [**Features**](features.md) | Learn about the features and extended capabilities of the Stype package. |
- | [**Troubleshooting**](troubleshooting.md) | Get basic instructions to solve common issues you might experience when using the Stype package. |
+ | [**Installation**](installation.md) | Install the stYpe package and learn about the package requirements. |
+ | [**Getting started**](getting-started.md) | This section describes the steps to link the stYpe device with the Unity camera. |
+ | [**Features**](features.md) | Learn about the features and extended capabilities of the stYpe package. |
+ | [**Troubleshooting**](troubleshooting.md) | Get basic instructions to solve common issues you might experience when using the stYpe package. |
 
 ## Additional resources
 
-* See the [official Stype webpage](https://www.stype.tv) for more information about Stype devices.
+* See the [official stYpe webpage](https://www.stype.tv) for more information about stYpe devices.

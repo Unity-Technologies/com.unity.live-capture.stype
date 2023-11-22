@@ -25,7 +25,7 @@ namespace Unity.LiveCapture.Stype.Rendering
     /// <summary>
     /// Lens Distortion post process implementing the Brown–Conrady distortion model.
     /// </summary>
-    [Serializable, VolumeComponentMenu("Post-processing/Custom/Stype/Lens Distortion Brown-Conrady")]
+    [Serializable, VolumeComponentMenu("Post-processing/Custom/stYpe/Lens Distortion Brown-Conrady")]
     sealed public class LensDistortionVolumeComponent : CustomPostProcessVolumeComponent, IPostProcessComponent
     {
         static class ShaderIDs
