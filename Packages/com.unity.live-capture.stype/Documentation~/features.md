@@ -1,12 +1,12 @@
 # Features
 
-Get an overview of the Stype package features and further set up your Unity environment to improve time and frame accuracy.
+Get an overview of the stYpe package features and further set up your Unity environment to improve time and frame accuracy.
 
 | Section | Description |
 |---|---|
-| [Components](#components) | Get a description of all properties of the components provided in the Stype package. |
-| [Post-effects](#post-effects) | Get an overview of the camera post-effects you can control from your Stype device. |
-| [External Synchronization](#external-synchronization) | Set up genlock and timecode synchronization for your Stype device in Unity. |
+| [Components](#components) | Get a description of all properties of the components provided in the stYpe package. |
+| [Post-effects](#post-effects) | Get an overview of the camera post-effects you can control from your stYpe device. |
+| [External Synchronization](#external-synchronization) | Set up genlock and timecode synchronization for your stYpe device in Unity. |
 | [Profiling](#profiling) | Set up a Profiler Module in Unity to identify potential frame rate issues that would occur despite synchronization. |
 
 ## Components
@@ -15,7 +15,7 @@ This package provides a **RedSpy Device** component to sync the RedSpy device an
 
 ### RedSpy Device component
 
-This is the core component that defines a GameObject as a Capture Device through which you can drive a Unity Camera from a Stype RedSpy device. You can access its properties either from the Take Recorder window or from the Inspector of the Capture Device GameObject.
+This is the core component that defines a GameObject as a Capture Device through which you can drive a Unity Camera from a stYpe RedSpy device. You can access its properties either from the Take Recorder window or from the Inspector of the Capture Device GameObject.
 
 ![RedSpy Device component](images/redspy-device-component.png)
 
@@ -23,11 +23,11 @@ Properties for setup:
 
 |Item |Description |
 |---|---|
-| **Camera** | The Unity camera to drive from your the Stype device. |
-| **Timecode Source** | The timecode source to use for the device timecode. If leave the selection to **None**, Unity uses the timecode in frames received from the Stype device. |
-| **Frame Rate** | The number of frames per second received from the Stype device. |
+| **Camera** | The Unity camera to drive from your the stYpe device. |
+| **Timecode Source** | The timecode source to use for the device timecode. If leave the selection to **None**, Unity uses the timecode in frames received from the stYpe device. |
+| **Frame Rate** | The number of frames per second received from the stYpe device. |
 
-All the other properties represent the data obtained by parsing the frames received from the Stype device. All this data is reflected in the Unity camera properties, resulting in animating the camera in the Scene. You can check these properties to verify that the device is configured correctly.
+All the other properties represent the data obtained by parsing the frames received from the stYpe device. All this data is reflected in the Unity camera properties, resulting in animating the camera in the Scene. You can check these properties to verify that the device is configured correctly.
 
 ## Post Effects
 
@@ -40,7 +40,7 @@ The RedSpy device allows you to control the following camera post-effects:
 
 ### Setup
 
-To set up the targeted Camera for supporting post-effects according to your Stype device:
+To set up the targeted Camera for supporting post-effects according to your stYpe device:
 
 1. Open the **Take Recorder window** and access the properties of the RedSpy Capture Device you've set up.
 
@@ -67,7 +67,7 @@ This package supports Depth Of Field in the following rendering pipelines:
 
 Apply Lens Distortion to reduce errors around the image that occur when merging with the actual image.
 
-The Stype package uses the Brown-Conrady lens distortion model.
+The stYpe package uses the Brown-Conrady lens distortion model.
 
 ![Lens Distortion](images/lens-distortion.gif)
 
@@ -77,7 +77,7 @@ This package supports Lens Distortion in the following render pipelines:
 
 ## External Synchronization
 
-A slight discrepancy always exists between the 3D rendering image in Unity and the real camera image. To resolve this discrepancy, it's necessary to synchronize the signal coming from the Stype device with the video. You can connect Stype devices and timecode generators to get time and frame synchronization within Unity.
+A slight discrepancy always exists between the 3D rendering image in Unity and the real camera image. To resolve this discrepancy, it's necessary to synchronize the signal coming from the stYpe device with the video. You can connect stYpe devices and timecode generators to get time and frame synchronization within Unity.
 
 Check the Live Capture package documentation about [Genlock](https://docs.unity3d.com/Packages/com.unity.live-capture@4.0/manual/genlock.html).
 

@@ -1,14 +1,14 @@
 # Get started
 
-Set up your Stype RedSpy device and connect it to the Unity Editor to control a camera in your Unity Scene.
+Set up your stYpe RedSpy device and connect it to the Unity Editor to control a camera in your Unity Scene.
 
 Before you start, make sure to [**setup your local network**](https://docs.unity3d.com/Packages/com.unity.live-capture@4.0/manual/connection-network.html) according to the Live Capture package requirements.
 
-## Set up your Stype device
+## Set up your stYpe device
 
 ### Requirements
 
-* The Stype device is powered on.
+* The stYpe device is powered on.
 * The device firmware is updated to the latest version.
 * Lens calibration is complete.
 
@@ -26,27 +26,27 @@ Before you start, make sure to [**setup your local network**](https://docs.unity
 
 ![Connection window](images/redspy-settings.png)
 
-## Connect the Stype device to the Unity Editor
+## Connect the stYpe device to the Unity Editor
 
-Use the [Connections window](https://docs.unity3d.com/Packages/com.unity.live-capture@4.0/manual/ref-window-connections.html) to create and enable a connection between your Stype device and the Unity Editor:
+Use the [Connections window](https://docs.unity3d.com/Packages/com.unity.live-capture@4.0/manual/ref-window-connections.html) to create and enable a connection between your stYpe device and the Unity Editor:
 
 1. From the Unity Editor menu, select **Window** > **Live Capture** > **Connections**.
 
-2. Select the **+** (plus) button in the upper left corner and choose **Stype Connection**.
+2. Select the **+** (plus) button in the upper left corner and choose **stYpe Connection**.
 
 3. Choose the IP address in **Interface** and set the **Port**.
 
 ![Connection window](images/connection-window.png)
 
-4. Verify the Connection Status changes to **`Connected to Stype API.`**.
+4. Verify the Connection Status changes to **`Connected to stYpe API.`**.
 
 ## Create a Capture Device
 
-Use the [Take Recorder window](https://docs.unity3d.com/Packages/com.unity.live-capture@4.0/manual/ref-window-take-recorder.html) to create a Capture Device that drives a Unity Camera using the data received from your Stype device:
+Use the [Take Recorder window](https://docs.unity3d.com/Packages/com.unity.live-capture@4.0/manual/ref-window-take-recorder.html) to create a Capture Device that drives a Unity Camera using the data received from your stYpe device:
 
-1. From the Unity Editor menu, select **Window** > **Live Capture** > **Take Recorder**, and then select the **+** (plus) button in the Capture Devices panel and choose **Stype > RedSpy**.
+1. From the Unity Editor menu, select **Window** > **Live Capture** > **Take Recorder**, and then select the **+** (plus) button in the Capture Devices panel and choose **stYpe > RedSpy**.
 
-2. Set the **Camera** property to target the camera of the Hierarchy you want to drive with your Stype device.
+2. Set the **Camera** property to target the camera of the Hierarchy you want to drive with your stYpe device.
 
 3. Set the appropriate values to **Timecode Source** and **Framerate** to synchronize with the video.
 
@@ -56,7 +56,7 @@ Use the [Take Recorder window](https://docs.unity3d.com/Packages/com.unity.live-
 
 ![Take Recorder window](images/take-recorder-window.png)
 
-Your Stype device now controls the targeted Unity camera in the Unity Scene.
+Your stYpe device now controls the targeted Unity camera in the Unity Scene.
 
 ## Record and export camera animation
 

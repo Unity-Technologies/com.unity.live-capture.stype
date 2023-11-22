@@ -146,7 +146,7 @@ namespace Unity.LiveCapture.Stype
                         }
                         if (m_LastPacketNo > frame.packetNo && m_LastPacketNo - frame.packetNo <= k_Threshold)
                         {
-                            Debug.LogWarning($"[Stype] Skipping packet {frame.packetNo}. Last received: {m_LastPacketNo}");
+                            Debug.LogWarning($"[stYpe] Skipping packet {frame.packetNo}. Last received: {m_LastPacketNo}");
                             continue;
                         }
                         if (!m_controller.IsConnected)

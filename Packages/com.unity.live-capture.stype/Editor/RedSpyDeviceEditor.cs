@@ -34,7 +34,7 @@ namespace Unity.LiveCapture.Stype.Editor
             public static string TimecodeLabel = "Timecode";
             public static GUIContent TranslationLabel = EditorGUIUtility.TrTextContent("Translation", "The translation of the camera.");
             public static GUIContent RotationLabel = EditorGUIUtility.TrTextContent("Rotation", "The rotation of the camera.");
-            public static GUIContent FocusLabel = EditorGUIUtility.TrTextContent("Focus", "The encoder focus value. If you set enable \"DOF mode\" on Stype device, this value returns as a focus distance.  If don't use DOF mode, it returns 0-close, 1-far (infinite)");
+            public static GUIContent FocusLabel = EditorGUIUtility.TrTextContent("Focus", "The encoder focus value. If you set enable \"DOF mode\" on stYpe device, this value returns as a focus distance.  If don't use DOF mode, it returns 0-close, 1-far (infinite)");
             public static GUIContent ZoomLabel = EditorGUIUtility.TrTextContent("Zoom", "The raw encoder zoom value. 0-wide, 1-tele.");
             public static GUIContent K1Label = EditorGUIUtility.TrTextContent("K1", "The radial distortion coefficient. First radial distortion harmonic (mm-2).");
             public static GUIContent K2Label = EditorGUIUtility.TrTextContent("K2", "The radial distortion coefficient. Second radial distortion harmonic (mm-4).");
@@ -307,7 +307,7 @@ namespace Unity.LiveCapture.Stype.Editor
             GUILayout.BeginHorizontal();
             {
                 GUILayout.FlexibleSpace();
-                GUILayout.Label(m_TitleIcon, GUILayout.MinWidth(1));
+                GUILayout.Label(m_TitleIcon, GUILayout.MinWidth(1), GUILayout.MaxHeight(48));
                 GUILayout.FlexibleSpace();
             }
             GUILayout.EndHorizontal();
@@ -315,7 +315,7 @@ namespace Unity.LiveCapture.Stype.Editor
             GUILayout.BeginHorizontal();
             {
                 GUILayout.FlexibleSpace();
-                GUILayout.Label($"{StypeInfo.CompanyName} {StypeInfo.RedSpyName} Device", Styles.titleStyle);
+                GUILayout.Label($"Camera tracking: {StypeInfo.RedSpyName} by {StypeInfo.CompanyName}", Styles.titleStyle);
                 GUILayout.FlexibleSpace();
             }
             GUILayout.EndHorizontal();

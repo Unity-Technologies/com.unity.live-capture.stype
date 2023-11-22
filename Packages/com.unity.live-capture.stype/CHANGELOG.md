@@ -8,4 +8,4 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Added
 
-- Stype RedSpy 3.0 support.
+- stYpe RedSpy 3.0 support.

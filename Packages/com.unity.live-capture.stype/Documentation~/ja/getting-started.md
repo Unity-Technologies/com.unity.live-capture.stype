@@ -1,15 +1,15 @@
 # チュートリアル
 
-Stype RedSpy デバイスをセットアップし、Unity エディタに接続して Unity シーン内のカメラをコントロールします。
+stYpe RedSpy デバイスをセットアップし、Unity エディタに接続して Unity シーン内のカメラをコントロールします。
 
 まず始めに、Live Capture パッケージのドキュメントに従って、[**ローカルネットワーク**](https://docs.unity3d.com/Packages/com.unity.live-capture@4.0/manual/connection-network.html)の設定を行ってください。
 
-## Stype デバイスのセットアップ
+## stYpe デバイスのセットアップ
 
 ### セットアップ前の確認事項
 
-* Stype デバイスの電源が入っていること。
-* Stype デバイスのファームウェアが最新バージョンにアップデートされていること。
+* stYpe デバイスの電源が入っていること。
+* stYpe デバイスのファームウェアが最新バージョンにアップデートされていること。
 * レンズのキャリブレーションが完了していること。
 
 ### RedSpy デバイスのセットアップ
@@ -26,27 +26,27 @@ Stype RedSpy デバイスをセットアップし、Unity エディタに接続�
 
 ![Connection window](../images/redspy-settings.png)
 
-## Stype デバイスを Unity エディタに接続する
+## stYpe デバイスを Unity エディタに接続する
 
-[Connection ウィンドウ](https://docs.unity3d.com/Packages/com.unity.live-capture@4.0/manual/ref-window-connections.html)を使って、Stype デバイスと Unity エディタの接続を確立します：
+[Connection ウィンドウ](https://docs.unity3d.com/Packages/com.unity.live-capture@4.0/manual/ref-window-connections.html)を使って、stYpe デバイスと Unity エディタの接続を確立します：
 
 1. Unity エディタのメニューから、**Window** > **Live Capture** > **Connections** を選択します。
 
-2. 左上の **+**（プラス）ボタンを選択し、**Stype Connection** を選択します。
+2. 左上の **+**（プラス）ボタンを選択し、**stYpe Connection** を選択します。
 
 3. **Interface** で IP アドレスを選択し、**Port** を設定します。
 
 ![Connection window](../images/connection-window.png)
 
-4. Connection Status が **`Connected to Stype API.`** に変わっていることを確認します。
+4. Connection Status が **`Connected to stYpe API.`** に変わっていることを確認します。
 
 ## キャプチャデバイスの作成
 
-[Take Recorder ウィンドウ](https://docs.unity3d.com/Packages/com.unity.live-capture@4.0/manual/ref-window-take-recorder.html)を使用して、Stype デバイスから受信したデータを使用して Unity カメラを制御するため、キャプチャデバイスを作成します：
+[Take Recorder ウィンドウ](https://docs.unity3d.com/Packages/com.unity.live-capture@4.0/manual/ref-window-take-recorder.html)を使用して、stYpe デバイスから受信したデータを使用して Unity カメラを制御するため、キャプチャデバイスを作成します：
 
-1. Unity エディタのメニューから、**Window** > **Live Capture** > **Take Recorder** を選択し、Capture Devices パネルの **+**（プラス）ボタンを選択し、**Stype > RedSpy** を選択します。
+1. Unity エディタのメニューから、**Window** > **Live Capture** > **Take Recorder** を選択し、Capture Devices パネルの **+**（プラス）ボタンを選択し、**stYpe > RedSpy** を選択します。
 
-2. **Camera** プロパティを設定し、Stype デバイスで制御したいカメラをターゲットにします。
+2. **Camera** プロパティを設定し、stYpe デバイスで制御したいカメラをターゲットにします。
 
 3. 映像と同期させるために、**Timecode Source** と **Framerate** に適切な値を設定します。
 
@@ -56,7 +56,7 @@ Stype RedSpy デバイスをセットアップし、Unity エディタに接続�
 
 ![Take Recorder window](../images/take-recorder-window.png)
 
-これで、Stype デバイスが Unity シーン内で対象の Unity カメラをコントロールするようになりました。
+これで、stYpe デバイスが Unity シーン内で対象の Unity カメラをコントロールするようになりました。
 
 ## カメラアニメーションの記録とエクスポート
 

@@ -18,9 +18,9 @@ namespace Unity.LiveCapture.Stype.Editor
         {
             public static readonly GUIContent interfacesLabel = new GUIContent("Interface", "Available IP addresses on this machine.");
             public static readonly GUIContent streamStatusLabel = new GUIContent("Connection Status");
-            public static readonly GUIContent connectedLabel = new GUIContent("Connected to Stype API.");
-            public static readonly GUIContent connectingLabel = new GUIContent("Connecting to Stype API.");
-            public static readonly GUIContent disconnectedLabel = new GUIContent("Not Connected to Stype API.");
+            public static readonly GUIContent connectedLabel = new GUIContent("Connected to stYpe API.");
+            public static readonly GUIContent connectingLabel = new GUIContent("Connecting to stYpe API.");
+            public static readonly GUIContent disconnectedLabel = new GUIContent("Not Connected to stYpe API.");
         }
 
         SerializedProperty m_AutoStartOnPlay;

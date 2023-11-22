@@ -6,16 +6,16 @@ using UnityEngine;
 namespace Unity.LiveCapture.Stype
 {
     /// <summary>
-    /// The client used to communicate with the Stype Server.
+    /// The client used to communicate with the stYpe Server.
     /// </summary>
-    [CreateConnectionMenuItem("Stype Connection")]
+    [CreateConnectionMenuItem("stYpe Connection")]
     class StypeConnection : Connection
     {
         internal const string HostNameFieldName = nameof(m_HostName);
         internal const string PortFieldName = nameof(m_Port);
         internal const string AutoStartOnPlayFieldName = nameof(m_AutoStartOnPlay);
 
-        const string k_Name = "Stype Connection";
+        const string k_Name = "stYpe Connection";
         const string k_DefaultServer = "127.0.0.1";
         const int k_DefaultPort = 6011;
 
@@ -25,7 +25,7 @@ namespace Unity.LiveCapture.Stype
         bool m_SettingsExpanded = false;
 #pragma warning restore 414
 #endif
-        [SerializeField, Tooltip("The hostname or IP address of the Stype Server.")]
+        [SerializeField, Tooltip("The hostname or IP address of the stYpe Server.")]
         string m_HostName = k_DefaultServer;
         [SerializeField, Tooltip("The port on which the client will connect to the host.")]
         int m_Port = k_DefaultPort;
@@ -35,7 +35,7 @@ namespace Unity.LiveCapture.Stype
         readonly StypeClient m_Client = new StypeClient();
 
         /// <summary>
-        /// The hostname or IP address of the Stype Server.
+        /// The hostname or IP address of the stYpe Server.
         /// </summary>
         public string HostName
         {

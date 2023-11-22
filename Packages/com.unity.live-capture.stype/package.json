@@ -1,9 +1,9 @@
 {
   "name": "com.unity.live-capture.stype",
-  "displayName": "Live Capture Stype",
+  "displayName": "Live Capture stYpe",
   "version": "1.0.0-exp.1",
   "unity": "2022.2",
-  "description": "Package for Unity integration with Stype tracking system.",
+  "description": "Package for Unity integration with stYpe tracking system.",
   "dependencies": {
     "com.unity.film-internal-utilities": "0.19.1-preview",
     "com.unity.live-capture": "4.0.0"
